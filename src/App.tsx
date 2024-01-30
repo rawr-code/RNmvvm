@@ -24,7 +24,7 @@ function App(): React.JSX.Element {
         backgroundColor={backgroundStyle.backgroundColor}
       />
       <View style={styles.container}>
-        <Text style={styles.text}>
+        <Text>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
           pariatur exercitationem nemo molestiae quisquam optio explicabo
           accusantium corrupti? Voluptatibus facilis non quo temporibus ratione
@@ -37,13 +37,7 @@ function App(): React.JSX.Element {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'blue',
     flex: 1,
-    padding: 48,
-  },
-  text: {
-    color: 'white',
-    fontSize: 16,
   },
 });
 
