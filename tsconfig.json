@@ -1,10 +1,16 @@
 {
   "extends": "@react-native/typescript-config/tsconfig.json",
   "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "types": ["reflect-metadata"],
     "baseUrl": ".",
     "paths": {
-      "@components": ["src/components/index.ts"],
-      "@views": ["src/views/index.ts"]
+      "@data/*": ["src/data/*"],
+      "@domain/*": ["src/domain/*"],
+      "@infrastructure/*": ["src/infrastructure/*"],
+      "@components": ["src/ui/components/index.ts"],
+      "@views": ["src/ui/views/index.ts"]
     }
   }
 }

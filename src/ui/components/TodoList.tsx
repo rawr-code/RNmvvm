@@ -1,13 +1,16 @@
 import {View, Text, ScrollView} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
-const TodoList = () => {
+const TodoList = ({isLoading}: {isLoading: boolean}) => {
   return (
     <View className="flex-1 bg-white">
       <View className="px-10 pt-6 pb-8">
         <View className="my-6">
           <Text className="text-3xl text-black">
-            <Text className="font-bold">Monday,</Text> 3 Dec
+            <Text className="font-bold">
+              {isLoading ? 'aklsdklasd' : 'Monday,'}
+            </Text>{' '}
+            3 Dec
           </Text>
         </View>
         <View className="flex-row justify-between">

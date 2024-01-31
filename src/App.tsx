@@ -1,13 +1,13 @@
 import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 
-import {TodoList} from '@components';
+import {HomeView} from '@views';
 
 function App(): React.JSX.Element {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor="white" />
       <View style={styles.container}>
-        <TodoList />
+        <HomeView />
       </View>
     </SafeAreaView>
   );
