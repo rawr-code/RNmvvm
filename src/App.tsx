@@ -1,35 +1,13 @@
-import {
-  SafeAreaView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {SafeAreaView, StatusBar, StyleSheet, View} from 'react-native';
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+import {TodoList} from '@components';
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-    flex: 1,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
+    <SafeAreaView style={styles.container}>
+      <StatusBar barStyle="dark-content" backgroundColor="white" />
       <View style={styles.container}>
-        <Text>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
-          pariatur exercitationem nemo molestiae quisquam optio explicabo
-          accusantium corrupti? Voluptatibus facilis non quo temporibus ratione
-          deserunt modi, nam dicta aperiam error!
-        </Text>
+        <TodoList />
       </View>
     </SafeAreaView>
   );
